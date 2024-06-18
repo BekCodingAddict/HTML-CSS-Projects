@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" sans-serif;
+}
+
+.mainBox {
+  position: relative;
+  background: url(https://e0.pxfuel.com/wallpapers/1012/615/desktop-wallpaper-technology-technology-lines.jpg)
+    right no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.mainBox .sideBarMenu {
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.sideBarMenu .logo {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-sizing: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.sideBarMenu .logo a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+.sideBarMenu .menu {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+.sideBarMenu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+  transition: all 0.3xs linear;
+}
+
+.sideBarMenu .menu i {
+  color: #fff;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.sideBarMenu .menu a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sideBarMenu .menu li:hover {
+  border-left: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.sideBarMenu .socialMedia {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
+}
+
+.socialMedia i {
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 20px;
+  transition: all 0.2s linear;
+}
+
+.socialMedia i:hover {
+  opacity: 1;
+}
+
+#check {
+  display: none;
+}
+
+.mainBox .btnOne i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.sideBarMenu .btnTwo {
+  font-size: 25px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.1s linear;
+}
+
+.btnOne i:hover {
+  font-size: 29px;
+}
+
+.btnTwo i:hover {
+  font-size: 24px;
+}
+
+#check:checked ~ .sideBarMenu {
+  left: 0px;
+}
+
+#check:checked ~ .btnOne i {
+  opacity: 0;
+}
+#check:checked ~ .sideBarMenu .btnTwo i {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .mainBox .sideBarMenu {
+    width: 100%;
+    left: -100%;
+  }
+
+  .sideBarMenu .btnTwo {
+    left: calc(100% - 10%);
+  }
+  .sideBarMenu .menu i {
+    font-size: 2rem;
+  }
+
+  .socialMedia i {
+    font-size: 2rem;
+    padding: 0 8px;
+  }
+}
